@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/actions.js"></script>
+  <style type="text/css">
+    * {
+      font-family: "Helvetica",Arial,sans-serif;
+    }
+    
+    ul, li {
+      margin: 0;
+      padding: 0;
+    }
+    header.mainHeader {}
+    #appWrapper {}
+    #appWrapper section {
+      border: 1px solid #333333;
+      display: inline-block;
+      height: 20em;
+      margin: 0.333em;
+      width: 25em;
+    }
+    #appWrapper section header {
+      background: none repeat scroll 0 0 #E1E1E1;
+      border-bottom: 1px solid #333333;
+      height: 1.8em;
+    }
+    #appWrapper section header ul {}
+    #appWrapper section header ul li {
+      display: inline;
+    }
+    #appWrapper section header ul li ul {}
+    #appWrapper section header ul li ul li {
+      display: block;
+    }
+    #appWrapper section header ul li ul li.max {  
+      background: url("images/MaximizeHover.png") no-repeat scroll 0 0 transparent;
+    }
+    #appWrapper section header ul li ul li.min {  
+      background: url("images/MinimizeHover.png") no-repeat scroll 0 0 transparent;
+    }
+    #appWrapper section header ul li ul li.sizer {
+      float: right;
+      height: 10px;
+      opacity: .5;
+      position: relative;
+      right: 2px;
+      top: 2px;
+      width: 11px;
+    }
+    #appWrapper section header ul li ul li.options img {
+      opacity: .5;
+    }
+    #appWrapper section header ul li ul li.sizer:hover, #appWrapper section header ul li ul li.options img:hover {
+      opacity: 1;
+    }
+    #appWrapper section header ul li ul li.options {
+      float: right;
+      position: relative;
+      right: -9px;
+      top: 11px;
+      width: 2.2em;
+    }
+    #appWrapper section header ul li.icon {
+      height: 20px;
+      left: 2px;
+      position: relative;
+      top: 2px;
+      width: 20px;
+    }
+    #appWrapper section header ul li ul li.title, #appWrapper section header ul li ul li.status {
+      color: #666;
+      left: 1.5em;
+      position: relative;
+      top: -1.5em;
+      width: 5em;
+    }
+    #appWrapper section header ul li ul li.status {
+      font-size: 0.6em;
+      left: 2.8em;
+      position: relative;
+      top: -3em;
+    }
+    #appWrapper section aside.optionsShade {
+      border: 1px solid #777777;
+      display: none;
+      float: right;
+      font-size: 0.75em;
+      height: 6.5em;
+      overflow: hidden;
+      padding: 3px;
+      position: relative;
+      right: -1px;
+      top: -1px;
+      width: 6em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    
+  </header>
+  <div id="appWrapper">
+    <section>
+      <header>
+        <ul>
+          <li>
+            <ul>
+              <li class="sizer max"></li>
+              <li class="options">
+                <img src="images/RefreshHover.png" alt=""/>
+                <img src="images/SettingsHover.png" alt=""/>
+              </li>
+            </ul>
+          </li>
+          <li class="icon"><img src="images/RateMy_Icon.png" class="gidgetIcon" /></li>
+          <li>
+            <ul>
+              <li class="title">RateMy</li>
+              <li class="status">status</li>
+            </ul>
+          </li>
+        </ul>
+      </header>
+      <aside class="optionsShade">
+        <span>Top Rated</span><br/>
+        <span>My Interests</span><br/>
+        <span>Most Recent</span><br/>
+        <span>+ Categories</span><br/>
+        <span>+ Post</span>
+      </aside>
+    </section>
+    <section>
+      <header>
+        <ul>
+          <li>
+            <ul>
+              <li class="sizer max"></li>
+              <li class="options">
+                <img src="images/RefreshHover.png" alt=""/>
+                <img src="images/SettingsHover.png" alt=""/>
+              </li>
+            </ul>
+          </li>
+          <li class="icon"><img src="images/Chat_Icon.png" class="gidgetIcon" /></li>
+          <li>
+            <ul>
+              <li class="title">Chat</li>
+              <li class="status">status</li>
+            </ul>
+          </li>
+        </ul>
+      </header>
+    </section>
+    <section>
+      <header>
+        <ul>
+          <li>
+            <ul>
+              <li class="sizer max"></li>
+              <li class="options">
+                <img src="images/RefreshHover.png" alt=""/>
+                <img src="images/SettingsHover.png" alt=""/>
+              </li>
+            </ul>
+          </li>
+          <li class="icon"><img src="images/Photos_Icon.png" class="gidgetIcon" /></li>
+          <li>
+            <ul>
+              <li class="title">Photos</li>
+              <li class="status">status</li>
+            </ul>
+          </li>
+        </ul>
+      </header>
+    </section>
+    <section>
+      <header>
+        <ul>
+          <li>
+            <ul>
+              <li class="sizer max"></li>
+              <li class="options">
+                <img src="images/RefreshHover.png" alt=""/>
+                <img src="images/SettingsHover.png" alt=""/>
+              </li>
+            </ul>
+          </li>
+          <li class="icon"><img src="images/Social_Icon.png" class="gidgetIcon" /></li>
+          <li>
+            <ul>
+              <li class="title">Social</li>
+              <li class="status">status</li>
+            </ul>
+          </li>
+        </ul>
+      </header>
+    </section>
+    <section>
+      <header>
+        <ul>
+          <li>
+            <ul>
+              <li class="sizer max"></li>
+              <li class="options">
+                <img src="images/RefreshHover.png" alt=""/>
+                <img src="images/SettingsHover.png" alt=""/>
+              </li>
+            </ul>
+          </li>
+          <li class="icon"><img src="images/Blog_Icon.png" class="gidgetIcon" /></li>
+          <li>
+            <ul>
+              <li class="title">Blog</li>
+              <li class="status">status</li>
+            </ul>
+          </li>
+        </ul>
+      </header>
+    </section>
+    <section>
+      <header>
+        <ul>
+          <li>
+            <ul>
+              <li class="sizer max"></li>
+              <li class="options">
+                <img src="images/RefreshHover.png" alt=""/>
+                <img src="images/SettingsHover.png" alt=""/>
+              </li>
+            </ul>
+          </li>
+          <li class="icon"><img src="images/Deals_Icon.png" class="gidgetIcon" /></li>
+          <li>
+            <ul>
+              <li class="title">Deals</li>
+              <li class="status">status</li>
+            </ul>
+          </li>
+        </ul>
+      </header>
+    </section>
+  </div>
+</body>
+</html>
